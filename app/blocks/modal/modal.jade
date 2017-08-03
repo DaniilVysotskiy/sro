@@ -1,0 +1,15 @@
+mixin modal()
+	+b.modal
+		+b.modal__location(id="modal-location" role="dialog")&attributes(attributes)
+			.modal__dialog
+				button.btn.btn--close(type="button")
+					.modal__content
+						.modal__header
+							h3.modal__title Заказать звонок
+						.modal__body
+							form.modal__form
+								label.modal__label(for="location_tel") Номер телефона
+									input(type="tel" name="tel" id="location_tel" required="required")
+								.button-wrapper
+									button.btn Заказать звонок
+

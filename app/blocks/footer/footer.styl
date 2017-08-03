@@ -1,0 +1,56 @@
+.footer
+	display: flex
+	flex-direction: column
+	min-height: 378px
+	margin-top: auto
+	background-color: footer_bg_color
+	&__top
+		padding: 20px 0 40px
+		&--wrapper
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			margin: 0 -10px
+	&__bottom
+		display: flex
+		min-height: 41px
+		margin-top: auto
+		background-color: brand_blue_color
+		color: white
+		&--wrapper
+			display: flex
+			flex-flow: row wrap			
+			align-items: stretch
+			background-color: brand_blue_color
+			height: 100%
+		&--left,
+		&--right
+			display: flex
+			align-items: center
+		&--left
+			display: flex
+			flex-flow: row wrap
+			position: relative
+			width: 70%
+			& > span, div
+				margin-y: 10px
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				right: -40px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 41px 0 0 41px
+				border-color: transparent transparent transparent brand_blue_color
+		&--right
+			flex-grow: 1
+			background: linear-gradient(45deg, rgba(24, 54, 76, 1) 0, rgba(54, 124, 174, 1) 40px, rgba(54, 124, 174, 1) 100%)
+			justify-content flex-end
+	a
+		color: white
+		text-decoration: none
+		&:hover,
+		&:focus
+			opacity: .9

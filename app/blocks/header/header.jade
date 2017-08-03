@@ -1,0 +1,12 @@
+include ../container/container
+include _top/_top
+include _middle/_middle
+include _bottom/_bottom
+include _search/_search
+
+mixin header()
+	+b.header&attributes(attributes)
+		+header__top
+		+header__middle
+		+header__bottom
+		+header__search

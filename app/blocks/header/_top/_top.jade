@@ -1,0 +1,27 @@
+mixin header__top()
+	+b.header__top&attributes(attributes)
+		.container
+			.header__top--wrapper
+				.location
+					a(href="#modal-location" class="location__link" data-link="modal") Москва
+					span(class="location__icon")
+				ul.nav
+					li.nav__item.nav__item--long.hasDropdown
+						a.nav__link(href="#0") Национальный реестр специалистов
+						ul.dropdown
+							li.dropdown__item
+								a.dropdown__link(href="#0") Как включить специалистов
+							li.dropdown__item
+								a.dropdown__link.active(href="#0") Заявка на вступление
+							li.dropdown__item
+								a.dropdown__link(href="#0") Документация
+							li.dropdown__item
+								a.dropdown__link(href="#0") FAQ
+					li.nav__item
+						a.nav__link(href="#0") Новости
+					li.nav__item
+						a.nav__link(href="#0") О компании
+					li.nav__item
+						a.nav__link(href="#0") Вопрос-ответ
+					li.nav__item
+						a.nav__link(href="#0") Контакты

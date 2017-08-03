@@ -1,0 +1,44 @@
+.header__middle
+	display: flex
+	padding-top: 7px
+	min-height: 100px
+	&--wrapper
+		display: flex
+		align-items: center
+		padding: 0 15px
+		height: 100%
+		& .group
+			display: flex
+			flex-flow: row wrap
+			align-items: center
+			margin: 0 auto
+			margin-left: 180px
+			&__item
+				margin: 10px 20px
+		& .tel,
+		& .mail
+			display: flex
+			align-items: center
+		& .tel
+			& .icon
+				min-width: 34px
+				sprite: $phone
+		& .mail
+			& .icon
+				min-width: 33px
+				sprite: $mail
+		& .icon
+			display: inline-block
+			margin-right: 15px
+		& .info
+			display: flex
+			flex-direction: column
+			&__title
+				color: grey_color
+				margin-bottom: 5px
+			&__link
+				text-decoration: none
+				color: header_blue_color
+				font-size: 18px
+				font-weight: bold
+				white-space: nowrap

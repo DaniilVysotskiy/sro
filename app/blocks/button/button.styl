@@ -1,0 +1,51 @@
+.button
+	display: inline-block
+	position: relative
+	padding: 10px 17px
+	border: 2px solid header_blue_color
+	background-color: white
+	color: header_blue_color
+	font-weight: bold
+	white-space: nowrap
+	&::before
+	&::after
+		content: ''
+		position: absolute
+		width: 8px
+		height: 8px
+	&::before
+		left: 2px
+		bottom: 2px
+		border-bottom: 2px solid header_blue_color
+		border-left: 2px solid header_blue_color
+	&::after
+		top: 2px
+		right: 2px
+		border-top: 2px solid header_blue_color
+		border-right: 2px solid header_blue_color
+	&--contrast
+			background-color: header_blue_color
+			border: 2px solid header_blue_color
+			color: white
+			padding: 6px 25px
+			max-height: 34px
+			&::before
+				border-bottom: 2px solid white
+				border-left: 2px solid white
+			&::after
+				border-top: 2px solid white
+				border-right: 2px solid white
+	&--search
+		display: inline-block
+		position: relative
+		padding: 0
+		border: none
+		background-color: transparent
+		color: header_blue_color
+		font-weight: bold
+		white-space: nowrap
+		sprite: $lope
+		&::before
+		&::after
+			content: none
+		

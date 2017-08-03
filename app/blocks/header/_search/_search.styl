@@ -1,0 +1,39 @@
+.header__search
+	display: flex
+	background-color: light_grey_color
+	min-height: 81px
+	&--wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+	& .search
+		width: 75%
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		&__label
+			color: grey_color
+			margin: 20px 0
+			margin-right: 10px
+			font-weight: bold
+		&__input
+			box-sizing: border-box
+			padding: 0 15px
+			padding-right: 40px
+			border: 1px solid grey_border_color
+			border-radius: 3px
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+			width: 100%
+			height: 34px
+			&--wrapper
+				margin: 20px 0
+				flex-grow: 1
+				position: relative
+				& .button--search
+					position: absolute
+					top: 10px
+					right: 15px
+		& .button--contrast
+			margin: 10px 0

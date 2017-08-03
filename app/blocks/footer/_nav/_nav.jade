@@ -1,0 +1,8 @@
+mixin footer_nav(title, value)
+	+b.footer__nav&attributes(attributes)
+		h3.title= title			
+		ul.nav
+			each val in value
+				li.nav__item
+					a(href=val)= val
+

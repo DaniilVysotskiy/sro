@@ -1,6 +1,6 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
-import slick from 'slick-carousel';
+// import slick from 'slick-carousel';
 
 $(() => {
 	function initModals() {

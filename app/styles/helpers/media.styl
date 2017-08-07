@@ -101,22 +101,35 @@
 		padding: 30px
 	.modals .modal__call-back .modal__title
 		padding-left: 80px
+		margin-bottom: 10px
 	.modals .modal__call-back .modal__title::before
 		left: 0
-
-
+	.modals .modal__call-back .modal__text,
+	.modals .modal__call-back .modal__form .modal__wrapper,
+		margin-bottom: 10px
+	.modals .modal__call-back .modal__form .modal__label:last-child
+		margin-bottom: 0
+	body .modals .modal__call-back .modal__form .modal__checkbox
+		margin-bottom: 20px
+		max-height: 568px
 @media (max-width: 600px)
+	.header__top .container
+		width: 100%
+		padding: 0
 	.container
-		padding: 0 10px;
+		width: 100%
+		padding: 0 10px
 	.header__top--wrapper
 		flex-direction: column
 	.header__top .location
 		position: relative
 		justify-content: center
-		width: calc(100% + 20px)
+		padding-right: 0
+		width: 100%
 		left: 0
 	.header__top .nav
 		flex-direction: column
+		flex-wrap: nowrap
 		margin-left: 0
 	.header__top .nav__link
 		text-align: center
@@ -131,6 +144,7 @@
 		flex-direction: column
 		align-items: center
 		width: calc(100% + 20px)
+		padding: 0
 		top: -40px
 		left: -10px
 	.consult__form > div
@@ -150,6 +164,8 @@
 		flex-direction: column
 	.footer__bottom--right
 		justify-content: center
+	.modals .modal__call-back .modal__dialog
+		padding: 10px
 	.modals .modal__call-back .modal__form .modal__wrapper
 		flex-direction: column
 	.modals .modal__call-back .modal__form .modal__label:first-child

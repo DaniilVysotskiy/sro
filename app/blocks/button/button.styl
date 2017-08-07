@@ -41,18 +41,19 @@
 		position: absolute
 		width: 8px
 		height: 8px
-		transition-property: top, left, right, bottom
+		transition-property: transform
 		transition-duration: .3s
 		transition-timing-function: ease-in-out
 	&::before
 		left: 2px
 		bottom: 2px
-		transform: tran
+		transform: translate(0, 0)
 		border-bottom: 2px solid header_blue_color
 		border-left: 2px solid header_blue_color
 	&::after
 		top: 2px
 		right: 2px
+		transform: translate(0, 0)
 		border-top: 2px solid header_blue_color
 		border-right: 2px solid header_blue_color
 	&--contrast

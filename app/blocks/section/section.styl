@@ -1,0 +1,33 @@
+.section
+	display: block
+	position: relative
+	&.carousel
+		background-color: #E5E6E8
+	&.hero
+		background-color: brand_blue_color
+		margin-top: -2px
+		padding-bottom: 50px
+		z-index: 1
+	&.default
+		padding: 50px 0
+	&__title
+		font-size: 32px
+		font-weight: 600
+		text-transform: uppercase
+		color: header_blue_color
+		margin-bottom: 30px
+		& > span
+			font-weight: 900
+	&__header
+		display: block
+		position: absolute
+		width: 100%
+		min-width: 100vw
+		height: 72px
+		top: 0
+		left: 0
+		background-color: brand_blue_color
+		z-index: -1
+	& .double
+		display: flex
+		flex-flow: row wrap

@@ -1,6 +1,6 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
 
 $(() => {
 	function initModals() {
@@ -37,10 +37,26 @@ $(() => {
 		});
 	}
 
+	function initSliders() {
+		$('.slider.single-item').slick({
+			dots: true,
+			infinite: false
+		});
+
+		$('.slider.items').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			dots: true,
+			infinite: false,
+			prevArrow: '<button type="button" class="slick-prev slick-arrow--blue">Previous</button>'
+		});
+	}
+
 
 	$(document).ready(() => {
 		svg4everybody();
 		initModals();
+		initSliders();
 
 		$(window).on('scroll', megaMenusScrollHandle);
 	});

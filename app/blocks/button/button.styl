@@ -61,6 +61,8 @@
 			&::after
 				border-top: 2px solid white
 				border-right: 2px solid white
+			&--white-border
+				border: 2px solid white
 	&--search
 		display: inline-block
 		position: relative
@@ -74,4 +76,15 @@
 		&::before
 		&::after
 			content: none
-		
+		&:hover,
+		&:focus
+			background-color: transparent
+			border: none
+			color: initial
+	&--news
+		max-width: 145px
+	&--large
+		width: 210px
+		height: 60px
+		font-size: 23px
+		font-weight: bold

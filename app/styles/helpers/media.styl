@@ -6,6 +6,16 @@
 	.header__top--wrapper
 		height: auto
 		background: header_blue_color
+	.consult
+		flex-direction: column
+		align-items: center
+	.consult__icon,
+	.consult__text
+		margin-right: 0
+		margin-bottom: 20px
+		text-align: center
+	.consult__form
+		margin-top: 0
 
 @media (max-width: 1140px)
 	.menu__list
@@ -43,8 +53,20 @@
 		height: auto
 
 @media (max-width: 900px)
+	.slider.single-item
+		display: none
+	.promo
+		margin-top: 40px
 	.seporator
 		display: none
+	.section__header
+		display: none
+	.services,
+	.news
+		width: 100%
+	.calc
+		background-image: none
+		background-color: #CEE8FA
 	.footer__bottom--right
 		justify-content: flex-start
 		margin-top: 10px
@@ -64,6 +86,17 @@
 		margin: 0 auto
 	.header__search .search .button--contrast
 		display: none
+	.calc
+		flex-direction: column
+		padding: 20px
+	.calc__icon
+		margin-right: 0
+		margin-bottom: 20px
+	.calc .button
+		margin-right: 0
+		margin-bottom: 20px
+	.calc__text
+		text-align: center
 
 @media (max-width: 600px)
 	.container
@@ -84,6 +117,22 @@
 		margin-left: 0
 	.header__search .search
 		width: 100%
+	.promo
+		position: relative
+		flex-direction: column
+		align-items: center
+		width: calc(100% + 20px)
+		top: -40px
+		left: -10px
+	.consult__form > div
+		flex-direction: column
+	.consult__label:first-child
+		margin-right: 0
+	.consult__label:last-child
+		margin-left: 0
+		margin-top: 30px
+	.consult__checkbox
+		margin-bottom: 30px
 	.footer__bottom--wrapper
 		padding: 20px 10px
 		text-align: center
@@ -99,3 +148,12 @@
 	.header__search .search
 		flex-direction: column
 		justify-content: center
+	.services__header .title
+		padding-left: 90px
+	.services__header .title::before
+		top: 5px
+		left: 15px
+	.news__body,
+	.services__body
+		flex-direction: column
+		align-items: center

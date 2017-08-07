@@ -1,11 +1,10 @@
 include ../header/header
-include ../content/content
 include ../footer/footer
 include ../modal/modal
 
 mixin page()
 	+b('body').page&attributes(attributes)
 		+header
-		+content
+		block content
 		+footer
 		+modal

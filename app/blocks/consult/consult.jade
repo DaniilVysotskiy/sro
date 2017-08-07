@@ -1,0 +1,14 @@
+mixin consult()
+	+b.consult&attributes(attributes)
+		.consult__icon
+		p.consult__text <span>Есть вопросы?</span><br>Получить бесплатную<br>консультацию!
+		form.consult__form(action="")
+			div
+				label.consult__label(for="user-name") Ваше имя
+					input.consult__input(type="text" name="name" id="user-name")
+				label.consult__label(for="user-tel") Ваш телефон
+					input.consult__input(type="tel" name="tel" id="user-tel")
+			div
+				input.consult__agree(type="checkbox" id="agree-term" hidden)
+				label.consult__checkbox(for="agree-term") Отправляя заявку Вы соглашаетесь с политикой конфиденциальности.
+				button.button.button--contrast.button--contrast--white-border(type="submit") Отправить

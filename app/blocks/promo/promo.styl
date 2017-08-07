@@ -1,0 +1,106 @@
+.promo
+	display: flex
+	flex-flow: row wrap
+	background-color: white
+	padding: 20px
+	margin: -40px 0 60px
+	&__item
+		display: flex
+		flex-direction: column
+		min-width: 300px
+		width: calc(33.33% - 40px)
+		margin: 20px
+		border: 2px solid black
+		&.green
+			border: 2px solid #367C94
+			& .promo__header
+				background: linear-gradient(45deg, #235161 0, #235161 140px, #367C94 170px, #367C94 100%)
+			& .promo__title
+				background-color: #367C94
+				&::after
+					border-color: transparent transparent transparent #367C94
+			& .promo__icon
+				sprite: $build_icon
+			& .promo__list__item::before
+				sprite: $promo_green_arrow
+		&.blue
+			border: 2px solid #3662AE
+			& .promo__header
+				background: linear-gradient(45deg, #263E77 0, #263E77 165px, #3662AE 195px, #3662AE 100%)
+			& .promo__title
+				background-color: #3662AE
+				padding-right: 5px
+				&::after
+					border-color: transparent transparent transparent #3662AE
+			& .promo__icon
+				sprite: $project_icon
+			& .promo__list__item::before
+				sprite: $promo_blue_arrow
+		&.purple
+			border: 2px solid #666EC7
+			& .promo__header
+				background: linear-gradient(45deg, #4B5194 0, #4B5194	 150px, #666EC7 180px, #666EC7 100%)
+			& .promo__title
+				background-color: #666EC7
+				&::after
+					border-color: transparent transparent transparent #666EC7
+			& .promo__icon
+				sprite: $research_icon
+			& .promo__list__item::before
+				sprite: $promo_purple_arrow
+	&__header
+		display: flex
+		position: relative
+		flex-wrap: nowrap
+		justify-content: flex-end
+		align-items: center
+		padding-right: 15px
+		height: 64px
+	&__title
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		position: absolute
+		padding: 0 30px
+		height: calc(100% + 7px)
+		top: 0
+		left: 0
+		color: white
+		text-transform: uppercase
+		& > span:first-child
+			font-weight: 900
+		& > span:last-child
+			font-weight: bold
+			font-size: 12px	
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: -71px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 71px 0 0 71px
+	&__body
+		padding: 50px 30px
+		background-color: white
+	&__list
+		&__item
+			position: relative
+			padding-left: 10px
+			&::before
+				content: ''
+				position: absolute
+				top: 2px
+				left: 0
+				sprite: $promo_green_arrow
+			&:not(:first-child)
+				margin-top: 30px
+	&__link
+		color: black
+		text-decoration: none
+		&:hover,
+		&:focus
+			text-decoration: underline
+

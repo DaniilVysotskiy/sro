@@ -1,0 +1,137 @@
+.slider
+	display: block
+	position: relative
+	&.single-item
+		max-width: 1240px
+		& .slick-list
+			overflow: hidden
+		& .slider__item
+			display: inline-block
+			position: relative
+		& .slider__img
+			width: 100%
+		& .slider__text
+			position: absolute
+			top: 50%
+			right: 100px
+			transform: translateY(-50%)
+			max-width: 40%
+		& .slider__title
+			font-size: 32px
+			font-weight: 600
+			text-transform: uppercase
+			color: white
+			margin-bottom: 20px
+			& > b
+				font-weight: 900
+		& .slick-arrow
+			background-color: transparent
+			position: absolute
+			border: none
+			top: 50%
+			transform: translateY(-50%)
+			font-size: 0
+			line-height: 0
+			padding: 5px
+			sprite: $slider_arrow
+			z-index: 1
+			&.slick-disabled
+				display: none
+		& .slick-prev
+			left: 35px
+		& .slick-next
+			right: 35px
+			transform: translateY(-50%) rotate(180deg)
+		& .slick-dots
+			position: absolute
+			width: 100%
+			bottom: 75px
+			text-align: center
+			& > li
+				display: inline-block
+			& > li:not(:first-child)
+				margin-left: 5px
+			& > li > button
+				display: block
+				position: relative
+				width: 16px
+				height: 16px
+				font-size: 0
+				line-height: 0
+				padding: 5px
+				cursor: pointer
+				color: transparent
+				border: none
+				outline: none
+				background: transparent
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 16px
+					height: 16px
+					text-align: center
+					background-color: dots_grey_color
+					border-radius: 50%
+				&.slick-active button::after
+					background-color: white
+	&.items
+		margin-bottom: 60px
+		& .slider__item
+			margin: 0 5px
+		& .slick-list
+			overflow: hidden
+			margin: 0 40px
+		& .slick-arrow
+			background-color: transparent
+			position: absolute
+			border: none
+			top: 50%
+			transform: translateY(-50%)
+			font-size: 0
+			line-height: 0
+			padding: 5px
+			sprite: $slider_arrow_blue
+			z-index: 1
+			&.slick-disabled
+				display: none
+		& .slick-prev
+			left: 0
+		& .slick-next
+			right: 0
+			transform: translateY(-50%) rotate(180deg)
+		& .slick-dots
+			position: absolute
+			width: 100%
+			bottom: -40px
+			text-align: center
+			& > li
+				display: inline-block
+			& > li:not(:first-child)
+				margin-left: 5px
+			& > li > button
+				display: block
+				position: relative
+				width: 16px
+				height: 16px
+				font-size: 0
+				line-height: 0
+				padding: 5px
+				cursor: pointer
+				color: transparent
+				border: none
+				outline: none
+				background: transparent
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 16px
+					height: 16px
+					text-align: center
+					background-color: #E6F3FC
+					border-radius: 50%
+			& > li.slick-active button::after
+					background-color: #BCE0FA

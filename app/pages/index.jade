@@ -1,6 +1,95 @@
 extends /blocks/layout-default/layout-default
+include /blocks/slider/slider
+include /blocks/promo/promo
+include /blocks/consult/consult
+include /blocks/services/services
+include /blocks/news/news
+include /blocks/calc/calc
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Главная';
 
 block content
+	+section('carousel')
+		+container('for-slider')
+			+slider('single-item')
+				.slider__item
+					img.slider__img(src="https://via.placeholder.com/1240x380")
+					.slider__text
+						h2.slider__title <b>Название</b><br>для первого слайда
+						p.slider__p Небольшое описание для первого слайда. Одна, две, или максимум три строки текста. Небольшое описание для первого слайда. Одна, две, или строки текста.
+				.slider__item
+					img.slider__img(src="https://via.placeholder.com/1240x380")
+					.slider__text
+						h2.slider__title <b>Название</b><br> для второго слайда
+						p.slider__p Небольшое описание для первого слайда. Одна, две, или максимум три строки текста. Небольшое описание для первого слайда. Одна, две, или строки текста.
+				.slider__item
+					img.slider__img(src="https://via.placeholder.com/1240x380")
+					.slider__text
+						h2.slider__title <b>Название</b><br> для третьего слайда
+						p.slider__p Небольшое описание для первого слайда. Одна, две, или максимум три строки текста. Небольшое описание для первого слайда. Одна, две, или строки текста.
+				.slider__item
+					img.slider__img(src="https://via.placeholder.com/1240x380")
+					.slider__text
+						h2.slider__title <b>Название</b><br> для четвертого слайда
+						p.slider__p Небольшое описание для первого слайда. Одна, две, или максимум три строки текста. Небольшое описание для первого слайда. Одна, две, или строки текста.
+	+section('hero')
+		+container
+			+promo
+			+consult
+	+section('default')
+		+container
+			h1.section__title Оформление допуска <span>СРО</span>
+			p В производственную базу компании входят 3 завода и 5 логистических центров. Численность персонала составляет более 1500 сотрудников, занятых на производствах по всему миру, треть из них работает в России.
+			p Электротехника EKF отличается высоким качеством, легкостью и удобством сборки, надежностью в эксплуатации и лаконичным дизайном.
+			p Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Богучанский алюминиевый завод, Казанский завод точного машиностроения, Саяно-Шушенская ГЭС, распределительные подстанции Ставрополя, Азова и Москвы.
+			<br>
+			p #[strong EKF для профессионалов] 
+			p Мы предлагаем широкий ассортимент электротехнической продукции для жилых, коммерческих и производственных зданий. Наша продукция используется в решениях по вводу, распределению и учету электроэнергии, в решениях по автоматизации и энергоэффективности.
+	+section
+		.section__header
+		+container
+			.double
+				+services
+					.services__header
+						h2.title Услуги и сервисы
+					.services__body
+						a.item.iso(href="#0") Сертификаты ISO
+						a.item.mchs(href="#0") Лицензия МЧС
+						a.item.qualification(href="#0") Повышение квалификации
+						a.item.certificate(href="#0") Сертификат соответствия на продукцию
+						a.item.register(href="#0") Национальный реестр специалистов
+						a.item.guarantee(href="#0") Банковские гарантии
+				+news
+					.news__header
+						h2.title Новости
+					.news__body
+						.item
+							a.item__link(href="#0") Женская и мужская команды столицы выиграли чемпионат России по современному пятиборью...
+							time.item__time 20.06.2017
+						.item
+							a.item__link(href="#0") Женская и мужская команды столицы выиграли чемпионат России по современному пятиборью...
+							time.item__time 20.06.2017
+						.item
+							a.item__link(href="#0") Женская и мужская команды столицы выиграли чемпионат России по современному пятиборью...
+							time.item__time 20.06.2017
+						button.button.button--contrast.button--news Все новости
+			+calc
+				div.calc__icon
+				button.button.button--large Калькулятор
+				span.calc__text Расчет СРО<br><span>онлайн</span>
+	+section('default')
+		+container
+			h1.section__title Наши партнеры
+			+slider('items')
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")
+				img.slider__item(src="https://via.placeholder.com/262x116")

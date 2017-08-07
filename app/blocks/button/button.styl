@@ -7,41 +7,47 @@
 	color: header_blue_color
 	font-weight: bold
 	white-space: nowrap
-	&:hover,
-	&:focus
+	&:hover
 		background-color: light_blue_color
 		border: 2px solid header_blue_color
 		color: header_blue_color
 		&::before
-			left: 1px
-			bottom: 1px
+			transform: translate(-4px, 4px)
 			border-bottom: 2px solid header_blue_color
 			border-left: 2px solid header_blue_color
+			transition-property: transform
+			transition-duration: .3s
+			transition-timing-function: ease-in-out
 		&::after
-			top: 1px
-			right: 1px
+			transform: translate(4px, -4px)
 			border-top: 2px solid header_blue_color
 			border-right: 2px solid header_blue_color
+			transition-property: transform
+			transition-duration: .3s
+			transition-timing-function: ease-in-out
 	&:active
 		background-color: dark_blue_color
 		border: 2px solid dark_blue_color
 		color: white
 		&::before
-			border-bottom: 2px solid white
-			border-left: 2px solid white
+			border-bottom: 2px solid dark_blue_color
+			border-left: 2px solid dark_blue_color
 		&::after
-			border-top: 2px solid white
-			border-right: 2px solid white
+			border-top: 2px solid dark_blue_color
+			border-right: 2px solid dark_blue_color
 	&::before
 	&::after
 		content: ''
 		position: absolute
 		width: 8px
 		height: 8px
-		// transition: top left right bottom .3s ease-in-out
+		transition-property: top, left, right, bottom
+		transition-duration: .3s
+		transition-timing-function: ease-in-out
 	&::before
 		left: 2px
 		bottom: 2px
+		transform: tran
 		border-bottom: 2px solid header_blue_color
 		border-left: 2px solid header_blue_color
 	&::after

@@ -1,14 +1,31 @@
 mixin modal()
-	+b.modal
-		+b.modal__location(id="modal-location" role="dialog")&attributes(attributes)
+	+b.modals
+		+b.modal.modal__location(id="modal-location" role="dialog")&attributes(attributes)
 			.modal__dialog
-				button.btn.btn--close(type="button")
-					.modal__content
-						.modal__header
-							h3.modal__title Заказать звонок
-						.modal__body
-							form.modal__form
-								label.modal__label(for="location_tel") Номер телефона
-									input(type="tel" name="tel" id="location_tel" required="required")
-								.button-wrapper
-									button.btn Заказать звонок
+				h3.modal__title Москва
+				form.modal__form
+					span.modal__text Вы сейчас в этом городе?
+					div.modal__wrapper
+						button.button.button--contrast(type="submit") Да
+						select#choose-city.select2(name="choose-city")
+							option(value="Нет, выбрать...", disabled, selected) Нет, выбрать...
+							option(value="Москва") Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+		+b.modal.modal__call-back(id="modal-call-back" role="dialog")&attributes(attributes)
+			.modal__dialog
+				button.close
+				h3.modal__title Обратный звонок
+				.modal__body
+					p.modal__text Оставьте Ваши контактные данные и вопрос, который Вас интересует. Наш менеджер свяжется с Вами в самое ближайшее время.
+					form.modal__form
+						div.modal__wrapper
+							label.modal__label(for="modal-user-name") Имя:
+								input.modal__input(type="text" name="name" id="modal-user-name")
+							label.modal__label(for="modal-user-tel") Телефон:
+								input.modal__input(type="tel" name="tel" id="modal-user-tel")
+						div.modal__wrapper
+							textarea.modal__textarea(placeholder="Сообщение..." rows="5")
+						div.modal__wrapper
+							input.modal__agree(type="checkbox" id="modal-agree-term" hidden)
+							label.modal__checkbox(for="modal-agree-term") Я согласен на обработку персональных данных
+							button.button.button--contrast.button--contrast--white-border(type="submit") Заказать

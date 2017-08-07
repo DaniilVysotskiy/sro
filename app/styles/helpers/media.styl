@@ -97,6 +97,13 @@
 		margin-bottom: 20px
 	.calc__text
 		text-align: center
+	.modals .modal__call-back .modal__dialog
+		padding: 30px
+	.modals .modal__call-back .modal__title
+		padding-left: 80px
+	.modals .modal__call-back .modal__title::before
+		left: 0
+
 
 @media (max-width: 600px)
 	.container
@@ -106,7 +113,7 @@
 	.header__top .location
 		position: relative
 		justify-content: center
-		width: calc(100% + 40px)
+		width: calc(100% + 20px)
 		left: 0
 	.header__top .nav
 		flex-direction: column
@@ -117,6 +124,8 @@
 		margin-left: 0
 	.header__search .search
 		width: 100%
+	.modals .modal__location .modal__dialog
+		width: auto
 	.promo
 		position: relative
 		flex-direction: column
@@ -141,6 +150,16 @@
 		flex-direction: column
 	.footer__bottom--right
 		justify-content: center
+	.modals .modal__call-back .modal__form .modal__wrapper
+		flex-direction: column
+	.modals .modal__call-back .modal__form .modal__label:first-child
+		margin-right: 0
+		margin-bottom: 20px
+	.modals .modal__call-back .modal__form .modal__label:last-child
+		margin-left: 0
+		margin-bottom: 10px
+	.modals .modal__call-back .modal__form .modal__checkbox
+		margin-bottom: 40px
 
 @media (max-width: 400px)
 	.header__search .search__label

@@ -1,4 +1,6 @@
 @media (max-width: 1170px)
+	.header__top
+		height: auto
 	.header__top .location
 		height: 100%
 	.header__top .location::after
@@ -6,6 +8,8 @@
 	.header__top--wrapper
 		height: auto
 		background: header_blue_color
+	.header__top .nav__item--long
+		width: 200px
 	.consult
 		flex-direction: column
 		align-items: center
@@ -18,6 +22,17 @@
 		margin-top: 0
 
 @media (max-width: 1140px)
+	.header__middle
+		padding: 10px 0
+	.header__middle--wrapper
+		flex-direction: column
+		justify-content: center
+		padding: 0
+	.logo
+		margin: 10px 20px
+	.header__middle--wrapper .group
+		justify-content: center
+		margin: 0 auto
 	.menu__list
 		flex-direction: column
 	.menu__item
@@ -26,21 +41,26 @@
 			margin-left: 0
 		&:last-child
 			margin-bottom: 0
-	.menu__item.hasDropdown
-		&:hover,
-		&:focus
-			border-left: 2px solid white
-			border-right: 2px solid white
 	.menu__item.hasDropdown::after
 		content: none
 	.menu__item .dropdown
 		position: absolute
-		width: calc(100% + 4px)
-		left: -2px
-		border-left: 2px solid white
-		border-right: 2px solid white
-		border-bottom: 2px solid white
-		
+		width: 100%
+	.menu__item.hasDropdown::before
+		content: ''
+		position: absolute
+		background-image: url("../images/sprites/icons.png")
+		background-position: -161px -82px
+		width: 11px
+		height: 5px
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+	.promo
+		justify-content: center
+	.promo__item
+		width: calc(50% - 40px)
 @media (max-width: 1085px)
 	.footer__bottom--right
 		background: brand_blue_color
@@ -48,9 +68,16 @@
 		content: none
 
 
-@media (max-width: 1000px)
+@media (max-width: 1024px)
 	.header__top--wrapper
 		height: auto
+	.header__top .nav > .hasDropdown:hover > .dropdown
+		display: none
+	.header__middle--wrapper
+		padding: 0
+	.services__body
+		justify-content: space-around
+
 
 @media (max-width: 900px)
 	.slider.single-item
@@ -73,17 +100,11 @@
 		margin-bottom: 10px
 
 @media (max-width: 700px)
-	.header__middle
-		padding: 10px 0
-	.header__middle--wrapper
-		flex-direction: column
-		justify-content: center
-		padding: 0
-	.logo
-		margin: 10px 20px
 	.header__middle--wrapper .group
-		justify-content: center
-		margin: 0 auto
+		flex-direction: column
+		align-items: flex-start
+	.header__middle--wrapper .group__item:last-child
+		margin-x: auto
 	.header__search .search .button--contrast
 		display: none
 	.calc
@@ -99,23 +120,28 @@
 		text-align: center
 	.modals .modal__call-back .modal__dialog
 		padding: 30px
+		max-height: 100vh
 	.modals .modal__call-back .modal__title
 		padding-left: 80px
 		margin-bottom: 10px
 	.modals .modal__call-back .modal__title::before
 		left: 0
+	.modals .modal__call-back .modal__text
+		line-height: 1.2
 	.modals .modal__call-back .modal__text,
-	.modals .modal__call-back .modal__form .modal__wrapper,
+	.modals .modal__call-back .modal__form .modal__wrapper
 		margin-bottom: 10px
 	.modals .modal__call-back .modal__form .modal__label:last-child
 		margin-bottom: 0
-	body .modals .modal__call-back .modal__form .modal__checkbox
+	.modals .modal__call-back .modal__form .modal__checkbox
 		margin-bottom: 20px
 		max-height: 568px
 @media (max-width: 600px)
 	.header__top .container
 		width: 100%
 		padding: 0
+	.header__top .nav__item
+		margin: 0
 	.container
 		width: 100%
 		padding: 0 10px
@@ -135,6 +161,8 @@
 		text-align: center
 	.header__top .nav__item:not(:first-child)
 		margin-left: 0
+	.header__top .nav__item--long
+		width: auto
 	.header__search .search
 		width: 100%
 	.modals .modal__location .modal__dialog
@@ -144,9 +172,11 @@
 		flex-direction: column
 		align-items: center
 		width: calc(100% + 20px)
-		padding: 0
+		padding: 10px 0
 		top: -40px
 		left: -10px
+	.promo__item
+		margin: 10px
 	.consult__form > div
 		flex-direction: column
 	.consult__label:first-child
@@ -156,6 +186,11 @@
 		margin-top: 30px
 	.consult__checkbox
 		margin-bottom: 30px
+	.services__header .title
+		padding-left: 90px
+	.services__header .title::before
+		top: 5px
+		left: 15px
 	.footer__bottom--wrapper
 		padding: 20px 10px
 		text-align: center
@@ -168,14 +203,15 @@
 		padding: 10px
 	.modals .modal__call-back .modal__form .modal__wrapper
 		flex-direction: column
+		margin-bottom: 10px
 	.modals .modal__call-back .modal__form .modal__label:first-child
 		margin-right: 0
-		margin-bottom: 20px
+		margin-bottom: 10px
 	.modals .modal__call-back .modal__form .modal__label:last-child
 		margin-left: 0
 		margin-bottom: 10px
 	.modals .modal__call-back .modal__form .modal__checkbox
-		margin-bottom: 40px
+		margin-bottom: 20px
 
 @media (max-width: 400px)
 	.header__search .search__label
@@ -183,11 +219,6 @@
 	.header__search .search
 		flex-direction: column
 		justify-content: center
-	.services__header .title
-		padding-left: 90px
-	.services__header .title::before
-		top: 5px
-		left: 15px
 	.news__body,
 	.services__body
 		flex-direction: column

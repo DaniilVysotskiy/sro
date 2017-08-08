@@ -1,8 +1,8 @@
 .header__top
-	display: flex
+	display: block
 	background-color: header_blue_color
 	color: white
-	min-height: 65px
+	height: 65px
 	&--wrapper
 		display: flex
 		flex-flow: row wrap
@@ -59,12 +59,11 @@
 			align-items: center
 			height: inherit
 			white-space: nowrap
+			background-color: transparent
+			margin: 0 5px
 			&--long
 				white-space: initial
-			&:not(:first-child)
-				margin-left: 10px
-			&:hover,
-			&:focus
+			&:hover
 				background-color: footer_bg_color
 				& .nav__link::after
 					transform: rotate(180deg)
@@ -85,9 +84,7 @@
 				min-width: 11px
 				sprite: $arrow_dropdown
 				margin-left: 5px
-				// padding-right: 5px
-			&:hover,
-			&:focus
+			&:hover
 				& > .dropdown
 					display: block
 			& .dropdown

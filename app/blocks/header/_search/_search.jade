@@ -7,6 +7,6 @@ mixin header__search()
 				form.search(action="")
 					label.search__label(for="search") Поиск по сайту:
 					.search__input--wrapper
-						input.search__input(type="search" id="search" placeholder="Оформление СРО")
+						input.search__input(type="text" id="search" placeholder="Оформление СРО")
 						+button("submit", "")&attributes({ "class": "button--search" })
 					+button("submit", "Найти")&attributes({ "class": "button--contrast" })

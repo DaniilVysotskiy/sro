@@ -31,7 +31,7 @@ $(() => {
 		const megaMenus = $('.js-mega-menu');
 
 		$.each(megaMenus, (idx, elem) => {
-			if ($(elem).css('position') === 'fixed'){
+			if ($(elem).css('position') === 'fixed') {
 				$(elem).css('transform', 'translateY(' + yOffset + 'px)');
 			}
 		});
@@ -48,8 +48,7 @@ $(() => {
 			slidesToScroll: 4,
 			dots: true,
 			infinite: false,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3,
@@ -82,14 +81,55 @@ $(() => {
 		});
 	}
 
+	function isMobile() {
+		if ($(window).width() < 1140) {
+			let touch = 'ontouchstart' in document.documentElement ||
+				navigator.maxTouchPoints > 0 ||
+				navigator.msMaxTouchPoints > 0;
+
+			if (touch) { // remove all :hover stylesheets
+				try { // prevent exception on browsers not supporting DOM styleSheets properly
+					for (let si in document.styleSheets) {
+						let styleSheet = document.styleSheets[si];
+						if (!styleSheet.rules) continue;
+
+						for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+							if (!styleSheet.rules[ri].selectorText) continue;
+
+							if (styleSheet.rules[ri].selectorText.match(':hover')) {
+								styleSheet.deleteRule(ri);
+							}
+						}
+					}
+				} catch (ex) {}
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function handleClickOnMenu() {
+		$(this).toggleClass('active');
+		$(this).children('.dropdown').toggle();
+	}
+
+	function dropdownToggleActivation() {
+		if (isMobile()) {
+			$('.hasDropdown').on('click', handleClickOnMenu);
+		} else {
+			$('.hasDropdown').off('click', handleClickOnMenu);
+		}
+	}
+
 
 	$(document).ready(() => {
 		svg4everybody();
 		initModals();
 		initSliders();
 		initSelect2();
-
-		// var docWidth = document.documentElement.offsetWidth;
+		dropdownToggleActivation();
+		// let docWidth = document.documentElement.offsetWidth;
 
 		// [].forEach.call(
 		// 	document.querySelectorAll('*'),

@@ -1,0 +1,12 @@
+extends /blocks/layout-default/layout-default
+include /blocks/breadcrumbs/breadcrumbs
+
+block head
+	- var pageTitle = 'Контакты';
+
+block content
+	+breadcrumbs(['Главная', 'Контакты'])
+	+section('default')
+		+container
+			h1.section__title Контакты
+			.contacts

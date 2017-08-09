@@ -21,6 +21,13 @@
 				border-right: 2px solid brand_blue_color
 				&:hover
 					border-right: 2px solid white
+			&::after
+				content: ''
+				position: absolute
+				bottom: -12px
+				left: 50%
+				transform: translateX(-50%)
+				sprite: $menu_arrow
 			&:hover
 				background-color: footer_bg_color
 				& > .dropdown
@@ -32,6 +39,7 @@
 					height: 2px
 					bottom: -2px
 					left: 0
+					background-image: none
 					background-color: footer_bg_color
 					box-shadow: none
 					z-index: 101
@@ -46,17 +54,6 @@
 					transform: translateX(-50%) rotate(180deg)
 					sprite: $arrow_dropdown
 					z-index: 100
-			&::after
-				content: ''
-				position: absolute
-				bottom: 0
-				left: 50%
-				transform: translateX(-50%) rotate(45deg) scale(1.2)
-				width: 0
-				height: 0
-				background-color: pink
-				box-shadow: 0 0 0 2px brand_blue_color, 0 0 0 4px white, 0 0 0 6px brand_blue_color, 0 0 0 8px white
-				z-index: -1
 		& .dropdown
 			display: none
 			position: fixed

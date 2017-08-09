@@ -48,7 +48,8 @@ $(() => {
 			slidesToScroll: 4,
 			dots: true,
 			infinite: false,
-			responsive: [{
+			responsive: [
+				{
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 3,
@@ -91,17 +92,17 @@ $(() => {
 				try { // prevent exception on browsers not supporting DOM styleSheets properly
 					for (let si in document.styleSheets) {
 						let styleSheet = document.styleSheets[si];
-						if (!styleSheet.rules) continue;
+						if (!styleSheet.rules) { continue; }
 
 						for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-							if (!styleSheet.rules[ri].selectorText) continue;
+							if (!styleSheet.rules[ri].selectorText) { continue; }
 
 							if (styleSheet.rules[ri].selectorText.match(':hover')) {
 								styleSheet.deleteRule(ri);
 							}
 						}
 					}
-				} catch (ex) {}
+				}catch (ex) {}
 			}
 			return true;
 		} else {
@@ -129,6 +130,7 @@ $(() => {
 		initSliders();
 		initSelect2();
 		dropdownToggleActivation();
+
 		// let docWidth = document.documentElement.offsetWidth;
 
 		// [].forEach.call(

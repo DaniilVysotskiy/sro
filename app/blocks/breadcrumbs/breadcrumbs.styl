@@ -1,0 +1,22 @@
+.breadcrumbs
+	display: block
+	width: 100%
+	margin-y: 20px
+	&__list
+		display: flex
+		flex-flow: row wrap
+	&__item
+		position: relative
+		&:not(:first-child)
+			&::before
+				content: '›'
+				display: inline-block
+				position: relative
+				margin-left: 8px
+				margin-right: 5px
+	&__link
+		color: header_blue_color
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+

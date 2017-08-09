@@ -1,5 +1,6 @@
 extends /blocks/layout-default/layout-default
 include /blocks/breadcrumbs/breadcrumbs
+include /blocks/contacts/contacts
 
 block head
 	- var pageTitle = 'Контакты';
@@ -9,4 +10,9 @@ block content
 	+section('default')
 		+container
 			h1.section__title Контакты
-			.contacts
+			+contacts
+				
+
+
+
+

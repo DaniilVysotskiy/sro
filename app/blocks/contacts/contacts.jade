@@ -1,0 +1,92 @@
+mixin contacts()
+	+b.contacts&attributes(attributes)
+		.contacts__info
+			.contacts__item.item
+				.item__title Телефоны
+				.item__body
+					.item__icon.phone
+					ul.item__list
+						li.item__list-item
+							span.item__text Бесплатный по России
+							a.item__link(href="tel:+7 (999) 130-06-09") +7 (999) 130-06-09
+						li.item__list-item
+							span.item__text Офис в Москве
+							a.item__link(href="tel:+7 (999) 130-06-09") +7 (999) 130-06-09
+						li.item__list-item
+							span.item__text Офис в Санкт-Петербурге
+							a.item__link(href="tel:+7 (999) 130-06-09") +7 (999) 130-06-09
+			.contacts__item.item
+				.item__title Электронная почта
+				.item__body
+					.item__icon.email
+					ul.item__list
+						li.item__list-item
+							span.item__text Сотрудничество
+							a.item__link(href="mailto:longdimainname@servermail.ru") longdimainname@servermail.ru
+						li.item__list-item
+							span.item__text Вакансии
+							a.item__link(href="mailto:longdimainname@servermail.ru") longdimainname@servermail.ru
+						li.item__list-item
+							span.item__text Расчитать услугу
+							a.item__link(href="mailto:longdimainname@servermail.ru") longdimainname@servermail.ru
+			.contacts__item.item
+				.item__title Текущая геолокация
+				.item__body
+					.item__icon.map
+					ul.item__list
+						li.item__list-item
+							span.item__text Ваш город
+							a.item__link(href="#0") Москва
+						li.item__list-item
+							span.item__text Вакансии
+							a.item__link(href="#0") ул. Зеленодольская, вл. 42
+						li.item__list-item
+							span.item__text Контактный телефон
+							a.item__link(href="tel:+7 (999) 130-06-09") +7 (999) 130-06-09
+		.contacts__map.map
+			.map__header
+				.map__header--left
+					.map__icon
+					a.jsDropdown(href="#map-list" data-item="dropdown") Список адресов
+			#map-list.map__list--wrapper
+				ul.map__list
+					li.map__list-item
+						a.map__link(href="#0" data-city="moscow") Москва
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="piter") Санкт-Петербург
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="kazan") Казань
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="volgorad") Волгоград
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="voronezh") Воронеж
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="saratov") Саратов
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+					li.map__list-item
+						a.map__link(href="#0" data-city="omsk") Омск
+						p.map__text ул. Баррикадная, д.19, стр.1<br>+7 (999) 130-06-09<br>longdimainname@servermail.ru
+			.map__ymap
+				<iframe src="https://yandex.ru/map-widget/v1/-/CBUA6HaNHB" width="100%" height="400" frameborder="0"></iframe>
+		.contacts__form
+			img.girl(src="/assets/images/girl.png", alt="Довольная девушка")
+			form.form
+				h2.form__title Форма обратной связи
+				div.form__group
+					label.form__label(for="contacts-name") Ваше имя
+						input.form__input(type="text" name="name" id="contacts-name" placeholder="Введите Ваше имя")
+					label.form__label(for="contacts-email") Ваш email
+						input.form__input(type="email" name="email" id="contacts-email" placeholder="Введите Ваше email")
+				div.form__group
+					label.form__label.zero-gap(for="contacts-message") Сообщение
+						textarea.form__textarea(placeholder="Текст сообщения" name="message" id="contacts-message" rows="5")
+				div.form__group
+					input.form__agree(type="checkbox" id="agree-term" hidden)
+					label.form__checkbox(for="agree-term") Отправляя заявку Вы соглашаетесь с политикой конфиденциальности.
+					button.button.button--contrast.button--contrast--white-border(type="submit") Отправить
+		.contacts__details

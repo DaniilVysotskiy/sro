@@ -49,10 +49,7 @@
 	.menu__item.hasDropdown::before
 		content: ''
 		position: absolute
-		background-image: url("../images/sprites/icons.png")
-		background-position: -161px -82px
-		width: 11px
-		height: 5px
+		sprite: $arrow_dropdown
 		right: 10px
 		top: 50%
 		transform: translateY(-50%)
@@ -61,6 +58,8 @@
 		justify-content: center
 	.promo__item
 		width: calc(50% - 40px)
+	.contacts .item__body
+		word-break: break-word
 @media (max-width: 1085px)
 	.footer__bottom--right
 		background: brand_blue_color
@@ -191,6 +190,11 @@
 	.services__header .title::before
 		top: 5px
 		left: 15px
+	.contacts__info
+		flex-direction: column
+		align-items: center
+	.contacts .item__body
+		padding: 20px 0
 	.footer__bottom--wrapper
 		padding: 20px 10px
 		text-align: center

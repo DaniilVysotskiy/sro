@@ -123,6 +123,16 @@ $(() => {
 		}
 	}
 
+	function initJsDropdown() {
+		$('[data-item="dropdown"]').on('click', function (e) {
+			e.preventDefault();
+			const target = $(this).attr('href');
+
+			$(this).toggleClass('folded');
+			$(target).toggle(300);
+		})
+	}
+
 
 	$(document).ready(() => {
 		svg4everybody();
@@ -130,6 +140,7 @@ $(() => {
 		initSliders();
 		initSelect2();
 		dropdownToggleActivation();
+		initJsDropdown();
 
 		// let docWidth = document.documentElement.offsetWidth;
 

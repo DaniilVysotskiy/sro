@@ -110,7 +110,7 @@ block content
 					| Комментарии
 					span#comments-count.comments__count 50
 				aside.aside
-					button.button.button--contrast Оставить комментарий
+					+button('button', 'Оставить комментарий')&attributes( { "data-href": "#modal-leave-comment", "data-link": "modal" }).button--contrast
 			+comments
 				.comments--wrapper
 					.comments__item.item

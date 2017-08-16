@@ -11,7 +11,7 @@ mixin modal()
 							option(value="Нет, выбрать...", disabled, selected) Нет, выбрать...
 							option(value="Москва") Москва
 							option(value="Санкт-Петербург") Санкт-Петербург
-		+b.modal.modal__call-back(id="modal-call-back" role="dialog")&attributes(attributes)
+		+b.modal.modal__default(id="modal-call-back" role="dialog")&attributes(attributes)
 			.modal__dialog
 				button.close
 				h3.modal__title Обратный звонок
@@ -29,3 +29,18 @@ mixin modal()
 							input.modal__agree(type="checkbox" id="modal-agree-term" hidden)
 							label.modal__checkbox(for="modal-agree-term") Я согласен на обработку персональных данных
 							button.button.button--contrast.button--contrast--white-border(type="submit") Заказать
+		+b.modal.modal__default(id="modal-leave-comment" role="dialog")&attributes(attributes)
+			.modal__dialog
+				button.close
+				h3.modal__title.comments-icon Ваш комментарий
+				.modal__body
+					form.modal__form
+						div.modal__wrapper
+							label.modal__label(for="modal-comment-name") Имя:
+								input.modal__input(type="text" name="name" id="modal-comment-name")
+							label.modal__label(for="modal-comment-email") Email:
+								input.modal__input(type="email" name="email" id="modal-comment-email")
+						div.modal__wrapper
+							textarea.modal__textarea(placeholder="Текст комментария..." rows="5")
+						div.modal__wrapper
+							button.button.button--contrast.button--contrast--white-border(type="submit") Отправить

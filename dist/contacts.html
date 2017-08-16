@@ -932,7 +932,7 @@
 					</form>
 				</div>
 			</div>
-			<div id="modal-call-back" role="dialog" class="modal modal__call-back">
+			<div id="modal-call-back" role="dialog" class="modal modal__default">
 				<div class="modal__dialog">
 					<button class="close"></button>
 					<h3 class="modal__title">Обратный звонок</h3>
@@ -957,6 +957,30 @@
 								<button type="submit" class="button button--contrast button--contrast--white-border">Заказать</button>
 							</div>
 							</form>
+					</div>
+				</div>
+			</div>
+			<div id="modal-leave-comment" role="dialog" class="modal modal__default">
+				<div class="modal__dialog">
+					<button class="close"></button>
+					<h3 class="modal__title comments-icon">Ваш комментарий</h3>
+					<div class="modal__body">
+						<form class="modal__form">
+							<div class="modal__wrapper">
+								<label for="modal-comment-name" class="modal__label">Имя:
+									<input type="text" name="name" id="modal-comment-name" class="modal__input" />
+								</label>
+								<label for="modal-comment-email" class="modal__label">Email:
+									<input type="email" name="email" id="modal-comment-email" class="modal__input" />
+								</label>
+							</div>
+							<div class="modal__wrapper">
+								<textarea placeholder="Текст комментария..." rows="5" class="modal__textarea"></textarea>
+							</div>
+							<div class="modal__wrapper">
+								<button type="submit" class="button button--contrast button--contrast--white-border">Отправить</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

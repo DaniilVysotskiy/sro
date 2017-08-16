@@ -1,0 +1,109 @@
+.banks
+	display: block
+	&--wrapper
+		display: flex
+	&--left
+		flex: 1 0 270px
+	&--right
+		flex-grow: 1
+		padding-left: 30px
+	&__content
+		border-top: 2px solid light_blue_color2
+		padding: 30px 0
+		padding-right: 30px
+	&__menu
+	& .menu
+		&__list
+			position: relative
+			display: flex
+			flex-direction: column
+			padding: 0 35px
+			background-color: footer_bg_color
+			&::before
+			&::after
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				transition-property: transform
+				transition-duration: .3s
+				transition-timing-function: ease-in-out
+			&::before
+				left: 4px
+				bottom: 4px
+				transform: translate(0, 0)
+				border-bottom: 2px solid white
+				border-left: 2px solid white
+			&::after
+				top: 4px
+				right: 4px
+				transform: translate(0, 0)
+				border-top: 2px solid white
+				border-right: 2px solid white
+		&__item
+			background-color: transparent
+			&:not(:first-child)
+				margin-left: 0
+				border-top: 1px solid white
+		&__link
+			font-weight: bold
+			&:hover
+				opacity: .8
+	&__extra
+		margin-top: 2px
+	& .extra
+		&__list
+			position: relative
+			display: flex
+			flex-direction: column
+			padding: 0 35px
+			border: 2px solid light_blue_color2
+			&::before
+			&::after
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				transition-property: transform
+				transition-duration: .3s
+				transition-timing-function: ease-in-out
+			&::before
+				left: 4px
+				bottom: 4px
+				transform: translate(0, 0)
+				border-bottom: 2px solid light_blue_color2
+				border-left: 2px solid light_blue_color2
+			&::after
+				top: 4px
+				right: 4px
+				transform: translate(0, 0)
+				border-top: 2px solid light_blue_color2
+				border-right: 2px solid light_blue_color2
+		&__item
+			flex: 1 1 auto
+			padding: 25px 0
+			padding-left: 50px
+			font-weight: 600
+			white-space: nowrap
+			text-align: center
+			border: none
+			text-align: left
+			&:not(:first-child)
+				border-top: 1px solid #CFE9FA
+		&__link
+			position: relative
+			color: header_blue_color
+			font-weight: bold
+			white-space: nowrap
+			text-decoration: none
+			&::before
+				content: ''
+				position: absolute
+				top: -10px
+				left: -50px
+			&.faq::before
+				sprite: $faq
+			&.documents::before
+				sprite: $documents
+			&:hover
+				opacity: .8

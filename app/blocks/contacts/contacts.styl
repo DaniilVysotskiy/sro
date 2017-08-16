@@ -117,6 +117,7 @@
 		background-color: light_grey_color
 		padding-left: 300px
 		min-height: 400px
+		border-bottom: 2px solid header_blue_color
 		& .girl
 			position: absolute
 			bottom: 0
@@ -171,7 +172,7 @@
 				display: flex
 				align-items: center
 				position: relative
-				color: grey_color
+				color: initial
 				padding-left: 40px
 				padding-top: 3px
 				font-size: 12px
@@ -187,7 +188,16 @@
 				left: 0
 				width: 26px
 				height: 26px
-				border: 1px solid #grey_border_color
+				border: 1px solid grey_border_color
 				border-radius: 3px
 				background-color: white
 				margin-right: 5px
+	&__details
+		padding: 30px
+		background-color light_grey_color
+		& .details
+			&__title
+				font-size: 28px
+				font-weight: 600
+				color: header_blue_color
+				margin-bottom: 30px

@@ -14,6 +14,17 @@
 		font-size: 28px
 		font-weight: 600
 		margin-bottom: 30px
+	&--comments
+		position: relative
+		padding-left: 100px
+		&::before
+			content: ''
+			position: absolute
+			top: -50%
+			left: 0
+			display: inline-block
+			vertical-align: middle
+			sprite: $comments
 	&--label
 		display: flex
 		justify-content: flex-end

@@ -1,0 +1,41 @@
+.comments
+	display: flex
+	flex-direction: column
+	margin-top: 30px
+	&__count
+		position: relative
+		color: #CFD0D0
+		font-weight: 100
+		&::before
+			content: ''
+			display: inline-block
+			position: relative
+			margin: 0 10px
+			width: 0
+			height: 100%
+			border: none
+			border-right: 2px dotted #CFD0D0
+			vertical-align: sub
+	&--wrapper
+		display: flex
+		flex-direction: column
+	&__item
+			margin-bottom: 40px
+	& .item
+		&__header
+			display: flex
+			justify-content: space-between
+			margin-bottom: 20px
+		&__user
+			font-weight: bold
+		&__line
+			position: relative
+			bottom: 3px
+			flex-grow: 1
+			border-bottom: 2px dotted #CFD0D0
+			margin: 0 30px
+		&__time
+			color: grey_color
+		&__body
+			padding-left: 40px
+

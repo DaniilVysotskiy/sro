@@ -4,6 +4,7 @@ include /blocks/banks/banks
 include /blocks/consult/consult
 include /blocks/slider/slider
 include /blocks/articles/articles
+include /blocks/comments/comments
 
 block head
 	- var pageTitle = 'Банковские гарантии';
@@ -102,4 +103,37 @@ block content
 						time.articles__time 20.06.2017
 				.articles__btn
 					a.button(href="#0") Все статьи по теме
-
+	+section('s-comments')
+		+container
+			.section--header
+				h2.title.title--h2.title--comments
+					| Комментарии
+					span#comments-count.comments__count 50
+				aside.aside
+					button.button.button--contrast Оставить комментарий
+			+comments
+				.comments--wrapper
+					.comments__item.item
+						.item__header
+							span.item__user Екатерина Басова
+							.item__line
+							time.item__time 20 июля 2017
+						.item__body
+							p.item__text Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл».
+					.comments__item.item
+						.item__header
+							span.item__user Екатерина Басова
+							.item__line
+							time.item__time 20 июля 2017
+						.item__body
+							p.item__text Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны. 
+					.comments__item.item
+						.item__header
+							span.item__user Екатерина
+							.item__line
+							time.item__time 20 июля 2017
+						.item__body
+							p.item__text Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических.
+				.comments__btn
+					button.button.button--comments Загрузить еще 10 комментариев
+					

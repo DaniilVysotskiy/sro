@@ -1,0 +1,83 @@
+.tabs
+	display: block
+	&--wrapper
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -15px
+	&--content
+		position: relative
+	&__block
+		display: none
+		&.active
+			display: block
+		&#build
+			border: 2px solid #367C94
+			border-top: 15px solid #367C94
+		&#project
+			border: 2px solid #3662AE
+			border-top: 15px solid #3662AE
+		&#research
+			border: 2px solid #666EC7
+			border-top: 15px solid #666EC7
+	&__tab
+		display: flex
+		position: relative
+		align-items: center
+		font-weight: bold
+		text-transform: uppercase
+		text-decoration: none
+		min-width: 270px
+		height: 65px
+		padding-left: 50px
+		margin-x: 15px
+		color: white
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: -65px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 65px 0 0 65px
+		&:hover
+			filter: brightness(1.1)
+		&.build
+			background-color: #367C94
+			background: linear-gradient(45deg, #245566 0, #367C94 100px, #367C94 100%);
+			z-index:3
+			&::after
+				border-color: transparent transparent transparent #367C94
+		&.project
+			background-color: #3662AE
+			background: linear-gradient(45deg, #1F3061 0, #3662AE 100px, #3662AE 100%);
+			z-index:2
+			&::after
+				border-color: transparent transparent transparent #3662AE
+		&.research
+			background-color: #666EC7
+			background: linear-gradient(45deg, #414680 0, #666EC7 100px, #666EC7 100%);
+			z-index:1
+			&::after
+				border-color: transparent transparent transparent #666EC7
+		&.active
+			font-size: 18px
+			font-weight: 900
+			z-index: 10
+			padding-top: 10px
+			padding-left: 20px
+			&::before
+				content: ''
+				margin-right: 15px
+			&.build
+				background: #367C94
+				&::before
+					sprite: $build_icon
+			&.project
+				background: #3662AE
+				&::before
+					sprite: $project_icon
+			&.research
+				background: #666EC7
+				&::before
+					sprite: $research_icon

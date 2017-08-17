@@ -1,0 +1,35 @@
+.radio
+	display: block
+	margin: 10px 30px
+	&:not(:first-child)
+		margin-left: 30px
+	& > input[type='radio']:checked + .label--radio::after
+		content: ''
+		position: absolute
+		top: 0px
+		left: 6px
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		background-color: #367C94
+.label
+	min-width: 170px
+	cursor: pointer
+	&--radio
+		display: inline-block
+		position: relative
+		padding-left: 40px
+		&::before
+			content: ''
+			position: absolute
+			width: 26px
+			height: 26px
+			border: 2px solid #367C94
+			border-radius: 50%
+			top: -6px
+			left: 0
+			box-sizing: border-box
+#build .label--radio::before
+	border: 2px solid #367C94
+#build .radio > input[type='radio']:checked + .label--radio::after
+	background-color: #367C94

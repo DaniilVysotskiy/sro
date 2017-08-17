@@ -133,6 +133,15 @@ $(() => {
 		})
 	}
 
+	function initTabs() {
+		$('.tabs__tab').on('click', function(e){
+			e.preventDefault();
+			var link = $(this).attr('href');
+
+			$(this).addClass('active').siblings().removeClass('active');
+			$(link).addClass('active').siblings().removeClass('active');
+		})
+	}
 
 	$(document).ready(() => {
 		svg4everybody();
@@ -141,6 +150,7 @@ $(() => {
 		initSelect2();
 		dropdownToggleActivation();
 		initJsDropdown();
+		initTabs();
 
 		// let docWidth = document.documentElement.offsetWidth;
 

@@ -80,8 +80,12 @@
 		justify-content: space-around
 	.articles--wrapper
 		justify-content: space-around
-
-
+	.tabs--wrapper
+		flex-direction: column
+	.tabs__tab::after
+		content: none
+	.tabs__tab.active
+		padding-top: 0
 
 @media (max-width: 900px)
 	.slider.single-item
@@ -155,6 +159,8 @@
 		display: none
 	.title--comments
 		margin-bottom: 50px;
+	.calc__form .form__inputs
+		flex-direction: column
 	.modals .modal__call-back .modal__dialog
 		padding: 30px
 		max-height: 100vh
@@ -202,6 +208,8 @@
 		width: auto
 	.header__search .search
 		width: 100%
+	.breadcrumbs__list
+		flex-direction: column
 	.modals .modal__location .modal__dialog
 		width: auto
 	.promo
@@ -245,6 +253,21 @@
 	.articles__item
 		margin: 0
 		margin-bottom: 30px
+	.calc__form .form__group--wrapper
+		flex-direction: column
+	.calc__form .form__group--wrapper .form__group:first-child
+		margin-right: 0
+		border-bottom: 2px solid #367C94
+	.calc__form .form__group--wrapper .form__group:last-child
+		margin-left: 0
+	.calc__form .form__inputs--left
+		margin-right: 0
+	.calc__form .form__inputs--right
+		flex: 1 0 auto
+	.calc__form .form__body
+		padding: 0 15px
+	.calc__form .form__footer
+		padding: 20px 15px
 	.footer__bottom--wrapper
 		padding: 20px 10px
 		text-align: center

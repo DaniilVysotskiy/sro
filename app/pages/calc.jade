@@ -1,0 +1,89 @@
+extends /blocks/layout-default/layout-default
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/calc/calc
+include /blocks/tabs/tabs
+include /blocks/radio/radio
+
+block head
+	- var pageTitle = 'Расчет стоимости допуска СРО';
+
+block content
+	+breadcrumbs(['Главная', 'Пункт меню', 'Пункт меню', 'Расчет стоимости допуска СРО'])
+	+section('default')
+		+container
+			h1.section__title Расчет стоимости допуска СРО
+			+tabs
+				.tabs--wrapper
+					a.tabs__tab.build.active(href="#build") Строительство
+					a.tabs__tab.project(href="#project") Проектирование
+					a.tabs__tab.research(href="#research") Изыскание
+				.tabs--content
+					.tabs__block#build.active
+						.calc__form
+							form.form(action="")
+								.form__body
+									.form__group
+										h3.form__subtitle Размер контракта организации
+										label.form__label
+											+radio('price1', 'price', 'до 60 млн', 'checked')
+											+radio('price2', 'price', 'до 500 млн')
+											+radio('price3', 'price', 'до 3 млрд')
+											+radio('price4', 'price', 'до 10 млрд')
+											+radio('price5', 'price', 'более 10 млрд')
+									.form__group
+										h3.form__subtitle Компенсационный фонд обеспечения договорных обязательств
+										label.form__label
+											+radio('with', 'fond', 'со взносом', 'checked')
+											+radio('without', 'fond', 'без взноса')
+									.form__group--wrapper
+										.form__group
+											h3.form__subtitle Тип допуска
+											label.form__label
+												+radio('usual', 'type', 'обычные работы', 'checked')
+												+radio('danger', 'type', 'опасные работы')
+										.form__group
+											h3.form__subtitle Членские взносы
+											label.form__label
+												+radio('12', 'payment', '12 месяцев', 'checked')
+												+radio('6', 'payment', '6 месяцев')
+									.form__group--wrapper
+										.form__group
+											h3.form__subtitle Страхование
+											label.form__label
+												+radio('yes', 'insurance', 'да', 'checked')
+												+radio('no', 'insurance', 'нет')
+										.form__group
+											h3.form__subtitle Специалисты НРС
+											label.form__label
+												+radio('available', 'specialists', 'есть', 'checked')
+												+radio('unavailable', 'specialists', 'нет')
+								.form__footer
+									h3.form__subtitle Контактные данные
+									.form__inputs
+										.form__inputs--left
+											.form--row
+												label.form__label2
+													span Имя:
+													input(type="text" name="name")
+												label.form__label2
+													span Телефон:
+													input(type="tel" name="tel")
+												label.form__label2
+													span Код:
+													input.code(type="text" name="code")
+											.form--row
+												input.form__agree(type="checkbox" id="agree-term" hidden)
+												label.form__checkbox(for="agree-term") Отправляя заявку Вы соглашаетесь<br>с политикой конфиденциальности.
+										.form__inputs--right
+											+button('submit', 'Отправить заявку на расчет').button--contrast
+											span Для повторной отправки запроса подождите, пожалуйста, <strong>29 сек.</strong>
+
+					.tabs__block#project Проектирование
+					.tabs__block#research Изыскание
+	+section('default mb50px')
+		+container
+			h2.title.title--h2 Заголовок H2
+			p Электротехника EKF отличается высоким качеством, легкостью и удобством сборки, надежностью в эксплуатации и лаконичным дизайном.
+			p Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Богучанский алюминиевый завод, Казанский завод точного машиностроения, Саяно-Шушенская ГЭС, распределительные подстанции Ставрополя, Азова и Москвы.
+			p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению. Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
+			p Оборудование EKF бесп

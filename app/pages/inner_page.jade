@@ -1,6 +1,6 @@
 extends /blocks/layout-default/layout-default
 include /blocks/breadcrumbs/breadcrumbs
-include /blocks/default/default
+include /blocks/default-page/default-page
 include /blocks/consult/consult
 include /blocks/slider/slider
 include /blocks/articles/articles
@@ -18,10 +18,10 @@ block content
 				aside.aside
 					.calc-icon
 					button.button.button--calc&attributes({ "onclick": "location.href='#0'"}) Рассчитать стоимость СРО
-			+default
-				.default--wrapper
-					.default--left
-						menu.default__menu.menu
+			+default-page
+				.default-page--wrapper
+					.default-page--left
+						menu.default-page__menu.menu
 							.menu__fold.build.active
 								.menu__name СРО строителей
 								ul.menu__list
@@ -55,7 +55,7 @@ block content
 										a.menu__link(href="#0") Расчет стоимости
 									li.menu__item
 										a.menu__link(href="#0") Банки партнеры
-						aside.default__extra.extra
+						aside.default-page__extra.extra
 							ul.extra__list
 								li.extra__item
 									a.extra__link.enter(href="#0") Вступление в СРО
@@ -65,17 +65,17 @@ block content
 									a.extra__link.support(href="#0") Помощь<br>в оформлении СРО
 								li.extra__item
 									a.extra__link.faq(href="#0") FAQ
-					.default--right
-						.default__content
+					.default-page--right
+						.default-page__content
 							p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению.
 							p Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
 							p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению. Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
 							p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению.
-						.default__consult
+						.default-page__consult
 							+consult
 	+section('default mb50px')
 		+container
-			.default__btns
+			.default-page__btns
 				a(href="#0")
 					img(src="assets/images/build_banner.jpg", alt="СРО строителей")
 				a(href="#0")

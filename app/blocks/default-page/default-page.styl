@@ -1,4 +1,4 @@
-.default
+.default-page
 	display: block
 	&__btns
 		display: flex
@@ -16,11 +16,14 @@
 		background-color: brand_blue_color
 		padding: 30px 30px
 		& .consult
-			flex-wrap: wrap
+			flex-flow: row wrap
 		& .consult__form
+			flex: 1 1 auto
 			flex-basis: 100%
 			margin-left: 160px
 			margin-top: 10px
+			& > div
+				flex: 1 0 auto
 	&--wrapper
 		display: flex
 	&--left

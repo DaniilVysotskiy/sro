@@ -143,6 +143,12 @@ $(() => {
 		})
 	}
 
+	function initFoldingMenu() {
+		$('.menu__fold').on('click', function (){
+			$(this).toggleClass('active').siblings().removeClass('active');
+		})
+	}
+
 	$(document).ready(() => {
 		svg4everybody();
 		initModals();
@@ -151,6 +157,7 @@ $(() => {
 		dropdownToggleActivation();
 		initJsDropdown();
 		initTabs();
+		initFoldingMenu();
 
 		// let docWidth = document.documentElement.offsetWidth;
 

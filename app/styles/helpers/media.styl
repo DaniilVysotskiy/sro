@@ -20,6 +20,8 @@
 		text-align: center
 	.consult__form
 		margin-top: 0
+	.default__consult .consult__form
+		margin-left: 0
 
 @media (max-width: 1140px)
 	.header__middle
@@ -115,16 +117,24 @@
 		margin-bottom: 20px
 		margin-right: 0
 		text-align: left
-	.banks--wrapper
+	.banks--wrapper,
+	.default--wrapper
 		flex-direction: column
-	.banks__content
+	.banks__content,
+	.default__content
 		border-top: 0
 	.footer__bottom--right
 		justify-content: flex-start
 		margin-top: 10px
 		margin-bottom: 10px
 
-// @media (max-width: 768px)
+@media (max-width: 768px)
+	.default__btns
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	.default__btns > a:not(:first-child)
+		margin-top: 10px
 
 @media (max-width: 700px)
 	.header__middle--wrapper .group
@@ -313,9 +323,11 @@
 	.services__body
 		flex-direction: column
 		align-items: center
-	.banks--right
+	.banks--right,
+	.default--right
 		padding-left: 0
-	.banks__content
+	.banks__content,
+	.default__content
 		padding-right: 0
 	.title--comments
 		padding-left: 0

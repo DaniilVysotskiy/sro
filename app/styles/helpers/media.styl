@@ -88,6 +88,8 @@
 		content: none
 	.tabs__tab.active
 		padding-top: 0
+	.banners--wrapper
+		justify-content: center
 
 @media (max-width: 900px)
 	.slider.single-item
@@ -175,6 +177,8 @@
 		margin-bottom: 50px;
 	.calc__form .form__inputs
 		flex-direction: column
+	.title--label
+		min-width: initial
 	.modals .modal__default .modal__dialog
 		padding: 30px
 		max-height: 100vh
@@ -264,7 +268,8 @@
 		height: 100%
 	.title--label::after
 		content: none
-	.section.styled-header .header .shadow.interesting
+	.section.styled-header .header .shadow.interesting,
+	.section.styled-header .header .shadow.popular
 		background: brand_blue_color
 	.articles--wrapper
 		flex-direction: column

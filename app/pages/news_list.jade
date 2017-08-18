@@ -1,0 +1,32 @@
+extends /blocks/layout-default/layout-default
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/news/news
+include /blocks/paginator/paginator
+
+block head
+	- var pageTitle = 'Новости';
+
+block content
+	+breadcrumbs(['Главная', 'Новости'])
+	+section('default')
+		+container
+			h1.section__title Новости
+			+news
+			+paginator
+	+section('styled-header mb50px')
+		.header
+			+container
+				h2.title.title--label.popular 
+					.icon
+					| Популярные услуги
+				.shadow.popular
+		+container
+			.banners--wrapper
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/build_banner_s.jpg", alt="СРО строителей")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/project_banner_s.jpg", alt="СРО проектировщиков")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/research_banner_s.jpg", alt="СРО изыскателей")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/sro_banner_s.jpg", alt="Расчет СРО онлайн")

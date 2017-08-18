@@ -29,6 +29,8 @@
 	&__form
 		& .form
 			&__body
+				display: flex
+				flex-direction: column
 				padding: 0 30px
 				& > .form__group:last-child
 					border-bottom: 0
@@ -38,17 +40,19 @@
 				& .form__subtitle
 					margin-bottom: 30px
 			&__group
+				flex: 1 0 auto
 				display: flex
 				flex-direction: column
 				margin-top: 30px
 				border-bottom: 2px solid #367C94
 				&--wrapper
+					flex: 1 0 auto
 					display: flex
 					&:last-child
 						& .form__group
 							border-bottom: 0
 					& .form__group
-						flex: 1 1 100%
+						flex: 1 0 auto
 						&:first-child
 							margin-right: 15px
 						&:last-child

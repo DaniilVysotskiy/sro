@@ -1,0 +1,35 @@
+.docs
+	display: block
+	&__item
+		display: flex
+		flex-flow: row nowrap
+		padding: 15px 25px
+		border-top: 2px solid #CEE8FA
+	& .item
+		&__icon
+			min-width: 43px
+			margin-right: 25px
+			sprite: $pdf_icon
+		&__desc
+			display: flex
+			flex-direction: column
+		&__text
+			margin-bottom: 5px
+		&__time
+			color: #BCBEC0
+		&__download
+			position: relative
+			white-space: nowrap
+			text-align: center
+			padding-top: 35px
+			color: #00AFED
+			&:hover
+				opacity: .8
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				sprite: $download_icon

@@ -1,0 +1,92 @@
+extends /blocks/layout-default/layout-default
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/docs/docs
+include /blocks/paginator/paginator
+
+block head
+	- var pageTitle = 'Документация';
+
+block content
+	+breadcrumbs(['Главная', 'Документация'])
+	+section('default mb50px')
+		+container
+			.section--header
+				h1.section__title Документация
+				aside.aside
+					.calc-icon
+					button.button.button--calc Рассчитать стоимость СРО
+			+docs
+				ul.docs__list
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+					li.docs__item.item
+						.item__icon
+						.item__desc
+							span.item__text Свидетельство о постановке на учет Российской организации в налоговом органе по месту нахождения на территории Российской Федерации от 26.12.2008 г.
+							time.item__time от 27.06.2017 г.
+						a.item__download(href="#0") скачать (20kb)
+				+paginator

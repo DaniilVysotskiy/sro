@@ -1,0 +1,9 @@
+mixin paginator()
+	nav.paginator&attributes({ "role": "navigation"})
+		a.paginator__prev(href="#0") Назад
+		.paginator--wrapper
+			a.paginator__item(href="#0") 1
+			a.paginator__item.active(href="#0") 2
+			a.paginator__item(href="#0") 3
+			a.paginator__item(href="#0") 4
+		a.paginator__next(href="#0") Вперед

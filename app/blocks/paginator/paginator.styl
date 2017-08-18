@@ -1,0 +1,56 @@
+.paginator
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+	margin: 30px auto
+	&--wrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+	&__prev,
+	&__next
+		position: relative
+		font-size: 16px
+		font-weight: 600
+		color: header_blue_color
+		text-decoration: none
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -1px
+			left: 0
+			sprite: $arrow_page
+		&:hover
+			opacity: .8
+	&__prev
+		padding-left: 20px
+		margin-right: 20px
+		&::before
+			transform: rotate(180deg)
+	&__next
+		padding-right: 20px
+		margin-left: 20px
+		&::before
+			left: auto
+			right: 0
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		width:40px
+		height: 34px
+		border: 2px solid #CEE8FA
+		text-align: center
+		font-size: 16px
+		font-weight: 600
+		color: header_blue_color
+		text-decoration: none
+		margin-left: -2px
+		margin-top: -2px
+		&.active,
+		&:hover
+			background-color: header_blue_color
+			color: white
+			border-color: header_blue_color 

@@ -40,7 +40,7 @@
 		<meta name="msapplication-square150x150logo" content="/mstile-medium.png">
 		<meta name="msapplication-wide310x150logo" content="/mstile-wide.png">
 		<meta name="msapplication-square310x310logo" content="/mstile-large.png">
-		<title>Расчет стоимости допуска СРО</title>
+		<title>СРО</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link href="assets/styles/app.min.css" rel="stylesheet">
@@ -618,181 +618,162 @@
 						<a href="#0" class="breadcrumbs__link">Главная</a>
 					</li>
 					<li class="breadcrumbs__item">
-						<a href="#0" class="breadcrumbs__link">Пункт меню</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#0" class="breadcrumbs__link">Пункт меню</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#0" class="breadcrumbs__link">Расчет стоимости допуска СРО</a>
+						<a href="#0" class="breadcrumbs__link">СРО</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="section default">
 			<div class="container">
-				<h1 class="section__title">Расчет стоимости допуска СРО</h1>
-				<div class="tabs">
-					<div class="tabs--wrapper">
-						<a href="#build" class="tabs__tab build active">Строительство</a>
-						<a href="#project" class="tabs__tab project">Проектирование</a>
-						<a href="#research" class="tabs__tab research">Изыскание</a>
-					</div>
-					<div class="tabs--content">
-						<div id="build" class="tabs__block active">
-							<div class="calc__form">
-								<form action="" class="form">
-									<div class="form__body">
-										<div class="form__group">
-											<h3 class="form__subtitle">Размер контракта организации</h3>
-											<label class="form__label">
-												<div class="radio">
-													<input type="radio" id="price1" name="price" value="price1" hidden="hidden" checked="checked" />
-													<label for="price1" class="label label--radio">до 60 млн</label>
-												</div>
-												<div class="radio">
-													<input type="radio" id="price2" name="price" value="price2" hidden="hidden" />
-													<label for="price2" class="label label--radio">до 500 млн</label>
-												</div>
-												<div class="radio">
-													<input type="radio" id="price3" name="price" value="price3" hidden="hidden" />
-													<label for="price3" class="label label--radio">до 3 млрд</label>
-												</div>
-												<div class="radio">
-													<input type="radio" id="price4" name="price" value="price4" hidden="hidden" />
-													<label for="price4" class="label label--radio">до 10 млрд</label>
-												</div>
-												<div class="radio">
-													<input type="radio" id="price5" name="price" value="price5" hidden="hidden" />
-													<label for="price5" class="label label--radio">более 10 млрд</label>
-												</div>
-											</label>
-										</div>
-										<div class="form__group">
-											<h3 class="form__subtitle">Компенсационный фонд обеспечения договорных обязательств</h3>
-											<label class="form__label">
-												<div class="radio">
-													<input type="radio" id="with" name="fond" value="with" hidden="hidden" checked="checked" />
-													<label for="with" class="label label--radio">со взносом</label>
-												</div>
-												<div class="radio">
-													<input type="radio" id="without" name="fond" value="without" hidden="hidden" />
-													<label for="without" class="label label--radio">без взноса</label>
-												</div>
-											</label>
-										</div>
-										<div class="form__group--wrapper">
-											<div class="form__group">
-												<h3 class="form__subtitle">Тип допуска</h3>
-												<label class="form__label">
-													<div class="radio">
-														<input type="radio" id="usual" name="type" value="usual" hidden="hidden" checked="checked" />
-														<label for="usual" class="label label--radio">обычные работы</label>
-													</div>
-													<div class="radio">
-														<input type="radio" id="danger" name="type" value="danger" hidden="hidden" />
-														<label for="danger" class="label label--radio">опасные работы</label>
-													</div>
-												</label>
-											</div>
-											<div class="form__group">
-												<h3 class="form__subtitle">Членские взносы</h3>
-												<label class="form__label">
-													<div class="radio">
-														<input type="radio" id="12" name="payment" value="12" hidden="hidden" checked="checked" />
-														<label for="12" class="label label--radio">12 месяцев</label>
-													</div>
-													<div class="radio">
-														<input type="radio" id="6" name="payment" value="6" hidden="hidden" />
-														<label for="6" class="label label--radio">6 месяцев</label>
-													</div>
-												</label>
-											</div>
-										</div>
-										<div class="form__group--wrapper">
-											<div class="form__group">
-												<h3 class="form__subtitle">Страхование</h3>
-												<label class="form__label">
-													<div class="radio">
-														<input type="radio" id="yes" name="insurance" value="yes" hidden="hidden" checked="checked" />
-														<label for="yes" class="label label--radio">да</label>
-													</div>
-													<div class="radio">
-														<input type="radio" id="no" name="insurance" value="no" hidden="hidden" />
-														<label for="no" class="label label--radio">нет</label>
-													</div>
-												</label>
-											</div>
-											<div class="form__group">
-												<h3 class="form__subtitle">Специалисты НРС</h3>
-												<label class="form__label">
-													<div class="radio">
-														<input type="radio" id="available" name="specialists" value="available" hidden="hidden" checked="checked" />
-														<label for="available" class="label label--radio">есть</label>
-													</div>
-													<div class="radio">
-														<input type="radio" id="unavailable" name="specialists" value="unavailable" hidden="hidden" />
-														<label for="unavailable" class="label label--radio">нет</label>
-													</div>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="form__footer">
-										<h3 class="form__subtitle">Контактные данные</h3>
-										<div class="form__inputs">
-											<div class="form__inputs--left">
-												<div class="form--row">
-													<label class="form__label2">
-														<span>Имя:</span>
-														<input type="text" name="name" />
-													</label>
-													<label class="form__label2">
-														<span>Телефон:</span>
-														<input type="tel" name="tel" />
-													</label>
-													<label class="form__label2">
-														<span>Код:</span>
-														<input type="text" name="code" class="code" />
-													</label>
-												</div>
-												<div class="form--row">
-													<input type="checkbox" id="agree-term" hidden="hidden" class="form__agree" />
-													<label for="agree-term" class="form__checkbox">Отправляя заявку Вы соглашаетесь
-														<br>с политикой конфиденциальности.</label>
-												</div>
-											</div>
-											<div class="form__inputs--right">
-												<button type="submit" class="button button--contrast">Отправить заявку на расчет</button>
-												<span>Для повторной отправки запроса подождите, пожалуйста,
-													<strong>29 сек.</strong>
-												</span>
-											</div>
-										</div>
-									</div>
-								</form>
+				<div class="section--header">
+					<h1 class="section__title">СРО</h1>
+					<aside class="aside">
+						<div class="calc-icon"></div>
+						<button class="button button--calc">Рассчитать стоимость СРО</button>
+					</aside>
+				</div>
+				<div class="banks">
+					<div class="banks--wrapper">
+						<div class="banks--left">
+							<menu class="banks__menu menu">
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="#0" class="menu__link">Получение</a>
+									</li>
+									<li class="menu__item">
+										<a href="#0" class="menu__link">Оформление</a>
+									</li>
+									<li class="menu__item">
+										<a href="#0" class="menu__link">Расчет стоимости</a>
+									</li>
+									<li class="menu__item">
+										<a href="#0" class="menu__link">Банки партнеры</a>
+									</li>
+								</ul>
+							</menu>
+							<aside class="banks__extra extra">
+								<ul class="extra__list">
+									<li class="extra__item">
+										<a href="#0" class="extra__link faq">FAQ</a>
+									</li>
+									<li class="extra__item">
+										<a href="#0" class="extra__link documents">Документы</a>
+									</li>
+								</ul>
+							</aside>
+						</div>
+						<div class="banks--right">
+							<div class="banks__content">
+								<p>Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под
+									такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм,
+									предоставляющих услуг по ее оформлению и сопровождению.</p>
+								<p>Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства
+									и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется
+									высокими комиссиями.</p>
+								<p>Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под
+									такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм,
+									предоставляющих услуг по ее оформлению и сопровождению. Государственный заказчик истребует у исполнителя документ,
+									подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства,
+									банк несет определенные риски. Это компенсируется высокими комиссиями.</p>
+								<p>Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под
+									такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм,
+									предоставляющих услуг по ее оформлению и сопровождению.</p>
+								<p>Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства
+									и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется
+									высокими комиссиями.</p>
+								<p>Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под
+									такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм,
+									предоставляющих услуг по ее оформлению и сопровождению.</p>
+								<p>Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства
+									и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется
+									высокими комиссиями. и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные
+									риски. Это компенсируется высокими комиссиями.</p>
 							</div>
 						</div>
-						<div id="project" class="tabs__block">Проектирование</div>
-						<div id="research" class="tabs__block">Изыскание</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="section default mb50px">
+		<div class="section s-consult">
 			<div class="container">
-				<h2 class="title title--h2">Заголовок H2</h2>
-				<p>Электротехника EKF отличается высоким качеством, легкостью и удобством сборки, надежностью в эксплуатации и лаконичным
-					дизайном.</p>
-				<p>Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе которых
-					Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Богучанский алюминиевый завод, Казанский
-					завод точного машиностроения, Саяно-Шушенская ГЭС, распределительные подстанции Ставрополя, Азова и Москвы.</p>
-				<p>Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой
-					закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих
-					услуг по ее оформлению и сопровождению. Государственный заказчик истребует у исполнителя документ, подтверждающий его
-					способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные
-					риски. Это компенсируется высокими комиссиями.</p>
-				<p>Оборудование EKF бесп</p>
+				<div class="consult">
+					<div class="consult__icon"></div>
+					<p class="consult__text">
+						<span>Есть вопросы?</span>
+						<br>Получить бесплатную
+						<br>консультацию!</p>
+					<form action="" class="consult__form">
+						<div>
+							<label for="user-name" class="consult__label">Ваше имя
+								<input type="text" name="name" id="user-name" class="consult__input" />
+							</label>
+							<label for="user-tel" class="consult__label">Ваш телефон
+								<input type="tel" name="tel" id="user-tel" class="consult__input" />
+							</label>
+						</div>
+						<div>
+							<input type="checkbox" id="agree-term" hidden="hidden" class="consult__agree" />
+							<label for="agree-term" class="consult__checkbox">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности.</label>
+							<button type="submit" class="button button--contrast button--contrast--white-border">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="section s-comments">
+			<div class="container">
+				<div class="section--header">
+					<h2 class="title title--h2 title--comments">Комментарии
+						<span id="comments-count" class="comments__count">50</span>
+					</h2>
+					<aside class="aside">
+						<button type="button" class="button button--contrast" data-href="#modal-leave-comment" data-link="modal">Оставить комментарий</button>
+					</aside>
+				</div>
+				<div class="comments">
+					<div class="comments--wrapper">
+						<div class="comments__item item">
+							<div class="item__header">
+								<span class="item__user">Екатерина Басова</span>
+								<div class="item__line"></div>
+								<time class="item__time">20 июля 2017</time>
+							</div>
+							<div class="item__body">
+								<p class="item__text">Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе
+									которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно
+									работает на многих знаковых промышленных и энергетических объектах страны, в числе которых Челябинский трубопрокатный
+									завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл».</p>
+							</div>
+						</div>
+						<div class="comments__item item">
+							<div class="item__header">
+								<span class="item__user">Екатерина Басова</span>
+								<div class="item__line"></div>
+								<time class="item__time">20 июля 2017</time>
+							</div>
+							<div class="item__body">
+								<p class="item__text">Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе
+									которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно
+									работает на многих знаковых промышленных и энергетических объектах страны. </p>
+							</div>
+						</div>
+						<div class="comments__item item">
+							<div class="item__header">
+								<span class="item__user">Екатерина</span>
+								<div class="item__line"></div>
+								<time class="item__time">20 июля 2017</time>
+							</div>
+							<div class="item__body">
+								<p class="item__text">Оборудование EKF бесперебойно работает на многих знаковых промышленных и энергетических объектах страны, в числе
+									которых Челябинский трубопрокатный завод, Михайловский ГОК, ПО «Корпус», завод «Кристалл», Оборудование EKF бесперебойно
+									работает на многих знаковых промышленных и энергетических.</p>
+							</div>
+						</div>
+					</div>
+					<div class="comments__btn">
+						<button class="button button--comments">Загрузить еще 10 комментариев</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="footer">

@@ -1,6 +1,5 @@
 extends /blocks/layout-default/layout-default
 include /blocks/breadcrumbs/breadcrumbs
-include /blocks/news/news
 include /blocks/paginator/paginator
 
 block head
@@ -11,7 +10,39 @@ block content
 	+section('default')
 		+container
 			h1.section__title Новости
-			+news
+			.news_list
+				.news_list__row
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» 
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» устурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути»  
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» 
+				.news_list__row
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» 
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» 
+					.news_list__item.item
+						.item__img
+							img(src="http://via.placeholder.com/371x247", alt="")
+						a.item__link(href="#0") В Ялте при аншлаге прошел первый и единственный концерт сербского режиссера
+						span.item__text Кустурица и The No Smoking Orchestra приехали в Крым с новой программой «По млечному пути» 
 			+paginator
 	+section('styled-header mb50px')
 		.header

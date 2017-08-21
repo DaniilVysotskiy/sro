@@ -1,0 +1,87 @@
+extends /blocks/layout-default/layout-default
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/paginator/paginator
+include /blocks/slider/slider
+
+block head
+	- var pageTitle = 'Новость';
+
+block content
+	+breadcrumbs(['Главная', 'Новости','Новость'])
+	+section('default mb50px')
+		+container
+			h1.section__title Новость
+			div
+				.img-float-left
+					img(src="http://via.placeholder.com/571x380", alt="")
+				p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению.
+				p Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
+				p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и предложение. Банковское обеспечение попадает под такой закон. Большой спрос предложение. Банковское обеспечение попадает под такой закон. Большой спрос сопровождению. Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
+				p Из основ экономической теории известно: чем выше спрос, тем больше предложение. Банковское обеспечение попадает под такой закон. Большой спрос на нее у организаций, приводит к увеличению количества банков, предоставляющих БГ и фирм, предоставляющих услуг по ее оформлению и сопровождению.
+				p Государственный заказчик истребует у исполнителя документ, подтверждающий его способность выполнить обязательства и гарантирующий его финансовую устойчивость. Выдавая обязательства, банк несет определенные риски. Это компенсируется высокими комиссиями.
+	+section('other-news')
+		+container
+			h2.title.title--h2.title--other-news Другие новости
+			+slider('items items--white items--news')
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+				.news-slider__item
+					.news-slider__img
+						img(src="https://via.placeholder.com/246x165")
+					p.news-slider__text Женская и мужская команды столицы выиграли чемпионат России по современному ...
+					a.news-slider__link(href="#0")
+	+section('styled-header mb50px')
+		.header
+			+container
+				h2.title.title--label.popular 
+					.icon
+					| Популярные услуги
+				.shadow.popular
+		+container
+			.banners--wrapper
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/build_banner_s.jpg", alt="СРО строителей")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/project_banner_s.jpg", alt="СРО проектировщиков")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/research_banner_s.jpg", alt="СРО изыскателей")
+				a.banners__link(href="#0")
+					img.banners__img(src="assets/images/sro_banner_s.jpg", alt="Расчет СРО онлайн")

@@ -148,6 +148,10 @@
 		align-items: center
 	.default__btns > a:not(:first-child)
 		margin-top: 10px
+	.img-float-left
+		float: none
+		margin: 0
+		margin-bottom: 10px
 
 @media (max-width: 700px)
 	.header__middle--wrapper .group
@@ -220,15 +224,21 @@
 		padding: 0 10px
 	.header__top--wrapper
 		flex-direction: column
+		height: auto
 	.header__top .location
+		flex: 1 1 auto
 		position: relative
+		top: initial
 		justify-content: center
 		padding-right: 0
 		width: 100%
+		height: auto
 		left: 0
 	.header__top .nav
+		flex: 1 1 auto
 		flex-direction: column
 		flex-wrap: nowrap
+		height: auto		
 		margin-left: 0
 	.header__top .nav__link
 		text-align: center
@@ -266,6 +276,12 @@
 	.services__header .title::before
 		top: 5px
 		left: 15px
+	.title--other-news::before
+		content: none
+	.title--other-news
+		padding-left: 0
+	.title--label
+		left: 10px
 	.contacts__info
 		flex-direction: column
 		align-items: center
